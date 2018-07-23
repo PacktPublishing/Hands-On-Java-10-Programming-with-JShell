@@ -1,0 +1,59 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, a bigger scale
+ * Video:   2.1 examples - Working with Classes
+*/
+
+// Creating a Class in JShell
+   public class Account {
+       private String name;
+   
+       public void setName(String name) {
+          this.name = name;
+       }
+   
+       public String getName() {
+          return name;
+       }
+   }
+
+// Viewing Declared Classes
+   /types
+
+// Explicitly Declaring Reference-Type Variables
+   Account account
+
+// Creating Objects
+   account = new Account()
+
+// Declaring an Implicit Account Variable Initialized with an Account Object
+   new Account()
+
+//Viewing Declared Variables
+   /vars
+
+// Manipulating Objects
+   account.setName("Mohamed")
+   account.getName()
+
+// Using the Return Value of a Method in a Statement
+   System.out.println(account.getName())
+
+// Creating a Meaningful Variable Name for an Expression
+   account.getName() //Shift + Tab release then type v   
+
+// Saving and Opening Code-Snippet Files
+   /save MySnippets.txt
+
+// Loading Snippets from a File
+   /open MySnippets.txt
+
+// Load Java Source-Code Files
+   /open Account.java
+
+
+
+
+

@@ -1,0 +1,39 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ *           By Packt Publisher
+ * section: Interactive Java Shell 10, Basics
+ * Video:   1.6 examples - Playing more with JShell
+*/
+
+// Resetting a JShell Session
+   var x = 10; System.out.println(x)
+   /list
+   /reset
+   /list
+
+// Writing Multi-line Statements
+   20
+   30
+   if($1 < $2){
+   	 System.out.printf("%d < %d",$1, $2);
+   }
+   /list
+
+// Editing Code Snippets
+   // /edit id
+   /edit 3
+   // change this in JShell edit pad and click accept
+   if($1 > $2){
+   	 System.out.printf("%d > %d",$1, $2);
+   }
+
+// Adding a New Snippet Via JShell Edit Pad
+   $1 = 100 //in JShell edit pad
+   /4  //executes if statement now again
+   /list
+
+// Exiting JShell
+   /exit
+
+	

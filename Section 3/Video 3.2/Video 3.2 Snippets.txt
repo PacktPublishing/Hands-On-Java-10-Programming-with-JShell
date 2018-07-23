@@ -1,0 +1,40 @@
+/*
+ * Author:  Mohamed Taman, 14/6/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, Advanced Topics
+ * Video:   3.2 examples - Using an External Editor
+*/
+
+//Set the editor on macOS
+
+	/set editor -wait open -a "/Applications/Sublime\ Text.app/"
+
+	/set editor gedit // default text editor On Linux
+
+	// default text editor On macOS
+	/set editor -wait open -a TextEdit 
+
+//Editing Snippets with a Custom Text Editor
+
+	int x = 10 //declare this in JShell
+
+	int y = 10 // declare this in JShell
+
+	/edit
+
+	//// Inside the text editor
+	//int y = 20;
+	//System.out.print(x + " + " + y + " = " + (x + y));
+
+	/list
+	
+//Retaining the Editor Setting
+
+	/set editor -retain -wait open -a "/Applications/Sublime Text.app/"
+
+//Restoring the JShell Edit Pad as the Default Editor
+
+	/set editor -retain -default
+
+   

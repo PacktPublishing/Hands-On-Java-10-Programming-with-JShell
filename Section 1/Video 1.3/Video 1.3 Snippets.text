@@ -1,0 +1,45 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: Interactive Java Shell 10, Basics
+ * Video:   1.3 examples - Welcome to JShell
+*/
+
+System.out.println("Welcome to Java SE 10 Programming")
+
+System.out.print("Welcome to Java SE 10 Programming")
+
+int number1
+
+int number1 = 30
+
+number1 = 45
+
+int sum = number1 + number2
+
+int number2 = 100
+
+int sum = number1 + number2
+
+/history //Show all snippets and commands entered in JShell
+
+/list //Show a list of all executed snippets
+
+/1  //Executes snippet with id 1 from list
+
+/! //Re-execute last snippets again.
+
+/1-2 7 //Executes the snippets from one to two and then snippet 6
+
+/reload //re-executes all snippets again
+
+11 + 5 //expression refereed as $13 (snippet Id)
+
+/list
+
+sum = number1 + $13
+
+/list
+
+sum //view the value of variable sum

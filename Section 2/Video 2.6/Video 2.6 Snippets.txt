@@ -1,0 +1,27 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, A bigger scale
+ * Video:   2.6 examples - Working with CLASSPATH
+*/
+
+/imports //Show all the imported packages and classes
+
+/env -class-path ./lib/gson-2.8.5.jar
+
+/open Account.Java
+
+import com.google.gson.*
+
+/imports
+
+Account acc = new Account()
+
+acc.setName("Mohamed Taman")
+acc.setId(10)
+
+Gson gson = new GsonBuilder().create()
+
+gson.toJson(acc) 
+   
