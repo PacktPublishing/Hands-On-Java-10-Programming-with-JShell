@@ -1,0 +1,7 @@
+//Using Module path
+
+java -p out/artifacts/tm.packt.ex.jshell.extension.jar  -m tm.packt.ex.jshell.extension/tm.packt.ex.jshell.extension.JShellScriptExecutor ../JShell_Script.jsh
+
+//or using classpath
+
+java -cp out/artifacts/tm.packt.ex.jshell.extension.jar tm.packt.ex.jshell.extension.JShellScriptExecutor ../JShell_Script.jsh

@@ -1,0 +1,6 @@
+
+[
+squid:S106	"9Replace this use of System.out or System.err by a logger.(“×·ôþÿÿÿÿ8þ±Ú®À,
+{
+squid:S135+"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆžÿÿÿÿÿ8‡–Â®À,
+Fsquid:S11488"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‡–Â®À,

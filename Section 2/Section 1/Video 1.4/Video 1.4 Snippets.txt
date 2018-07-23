@@ -1,0 +1,104 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: Interactive Java Shell 10, Basics
+ * Video:   1.4 examples - Java 10, "var" Local-Variable Type Inference
+*/
+   
+//var usage
+	var str = "a test string"
+	var substring = str.substring(2)
+	System.out.println(substring +", Type is:"+ substring.getClass().getTypeName())
+
+// Compile time safety is still there
+	var i = 10
+	i = "a string"
+
+// Also Polymorphism still works
+	import javax.swing.*
+
+	var password = new JPasswordField("Password text",0)
+	String.valueOf(password.getPassword()) // To convert password char array to string
+	var textField = new JTextField("Hello text")
+	textField = password
+	textField.getText()
+
+	//assign super type to subtype will not work (Compilation error)
+	password = textField
+
+//Collection element type inference and Generics
+	var list = Arrays.asList(10)
+	System.out.println(list)
+	//following needs no casting, which shows compiler has inferred correct element type int
+	int i = list.get(0) //equivalent to: var i = list.get(0);
+	System.out.println(i)
+
+	// diamond <> operator case
+	var list2 = new ArrayList<>(); list2.add(10); System.out.println(list2)
+	int i = list2.get(0) //Compilation error
+    int i = (int) list2.get(0) //need to cast to get int back
+    System.out.println(i)
+    
+    // In case of generics, we better need to use a specific type
+    var list3 = new ArrayList<Integer>(); list3.add(10); System.out.println(list3)
+	int i = list.get(0); System.out.println(i)
+
+//Loops
+	//For loop
+	for (var x = 1; x <= 5; x++) {
+           var z = x * 3; //equivalent to: int z = x * 3;
+           System.out.println(z);
+    }
+
+    //for each
+    var list = Arrays.asList(1,2,3,4,5,6,7)
+    for (var item : list) {
+    	var z = item * 2;
+    	System.out.println(z);
+    }
+
+    //Java 8 Streams
+    var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7)
+    var stream = list.stream()
+    stream.filter(x ->  x % 2 == 0).forEach(System.out::println)
+
+// Itinerary operation
+	var x = 3 > 0 ? 1 : -1
+	int i = x
+	//use different types of operands 
+	var x = 3 > 0 ? 1 : "Less than zero"; System.out.println(x.getClass()) //Integer
+
+	var x = 3 < 0 ? 1 : "Less than zero"; System.out.println(x.getClass()) // String
+	//Old way
+	Serializable x = 3 < 0 ? 1 : "Less than zero"; System.out.println(x.getClass()) // String
+
+//Passing to methods
+	BigDecimal squareOf(BigDecimal number) {
+	  var result= number.multiply(number);
+	  return result;
+	}
+
+	var number = new BigDecimal("1.6")
+	number = squareOf(number)
+
+	//In case of generics
+	<T extends Number> List<Integer> toIntList(List<T> listOfNumber) {
+	      var integers = listOfNumber.stream()
+	                                 .map(Number::intValue)
+	                                 .collect(Collectors.toList());
+	      return integers;
+	}
+
+	var numbers = List.of(1.1, 2.2, 3.3, 4.4, 5.5)
+	var integers = toIntList(numbers)
+
+//Usage with Anonymous inner classes
+	var message = "running..." //effectively final
+	var runner = new Runnable(){
+		@Override
+		public void run() {
+			System.out.println(message);
+		}}
+
+	runner.run()

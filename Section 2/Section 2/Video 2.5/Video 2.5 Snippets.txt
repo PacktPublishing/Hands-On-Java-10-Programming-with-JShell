@@ -1,0 +1,14 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, A bigger scale
+ * Video:   2.5 examples - Exceptions Handling
+*/
+
+int[] values = {10, 20, 30}
+
+values[1]
+
+values[10]
+   

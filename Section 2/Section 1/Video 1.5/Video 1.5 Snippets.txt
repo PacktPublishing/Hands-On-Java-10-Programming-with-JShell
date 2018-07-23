@@ -1,0 +1,65 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: Interactive Java Shell 10, Basics
+ * Video:   1.5 examples - Java 10 "var" type - Limitations
+*/
+
+// variable without initializer
+	var x
+
+// No Definite Assignment
+	void dummy() {
+       boolean b = true;
+       var x;
+       if (b) {
+           x = 1;
+       } else {
+           x = 2;
+       }
+       System.out.println(x);
+   }
+
+// No null assignment
+	var str = null
+
+//No Lambda initializer
+	var runnable = () -> {}
+
+// No Method Reference initializer
+	var abs = BigDecimal::abs
+
+// Not all array initializers work
+	// var with []
+	var numbers[] = new int[]{1, 2, 4}
+
+	//{1,2,3}
+	var numbers = {1, 2, 4}
+
+	//[]
+	var numbers[] = {1, 2, 4}
+
+	// This is work
+	var numbers = new int[]{1, 2, 4}
+    var number = numbers[1]
+    number = number + 3
+
+// No compound declaration
+   var x = 1, y = 3, z = 4
+
+// No var field allowed
+	class FieldExample {
+	  private var i;
+	}
+
+//No var Method parameters allowed
+	void doSomething(var x){}
+
+// No var as Method return type
+	var getSomething(){ return 5;}
+
+// No var in catch clause
+	try {
+	  Files.readAllBytes(Paths.get("c:\temp\temp.txt"));
+	} catch (var e) {}

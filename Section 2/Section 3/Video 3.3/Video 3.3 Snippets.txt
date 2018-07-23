@@ -1,0 +1,124 @@
+/*
+ * Author:  Mohamed Taman, 14/6/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, Advanced Topics
+ * Video:   3.3 examples - Overview of JShell Commands
+*/
+
+// Introduction
+	/help
+
+// Getting Help in JShell
+	/? intro
+
+	/? //show list of command
+
+	/? /list //more information on a given command’s 
+
+	/? /set start //more command options details
+
+	/? shortcuts // List of shortcuts
+
+//edit Command: Additional Features
+
+	class Account{
+     private int id;
+     public int getId(){
+     	return this.id;
+     } 
+     public void setId(int id){
+     	this.id = id;
+     }
+    }
+
+    /edit Account
+
+//reload Command
+45
+72
+if ($1 < $2) {
+  System.out.printf("%d < %d%n", $1, $2);
+}
+
+if ($1 > $2) {
+  System.out.printf("%d > %d%n", $1, $2);
+}
+
+$1 = 100
+
+if ($1 > $2) {
+  System.out.printf("%d > %d%n", $1, $2);
+}
+
+/list
+
+/reload
+
+/reload -quiet //to not to see the snippets as they reload
+
+//drop Command
+	int x = 10
+
+	int cube(int y) {return y * y * y;}
+
+	/list
+
+	/drop 1
+
+	/drop cube
+
+	/list
+
+//Feedback Modes
+	// Feedback Mode verbose
+	/set feedback verbose
+
+	int x = 10
+	int cube(int y) {return y * y * y;}
+	cube(x)
+	x= 5
+	cube(x)
+
+	//Feedback Mode concise
+	/set feedback concise
+	int x = 10
+	int cube(int y) {return y * y * y;}
+	cube(x)
+	x= 5
+	cube(x)
+
+	// Feedback Mode silent
+	/set feedback silent
+	int x = 10
+	int cube(int y) {return y * y * y;}
+	cube(x)
+	x= 5
+	cube(x)
+	/set feedback normal
+
+// Other JShell Features Configurable with /set
+	/set mode
+	/set prompt
+	/set truncation
+	/set format
+
+// Customizing JShell Startup
+	 /imports
+	
+	/set start command
+	/set start filename
+
+	/set start -none // reset all startup commands and files
+
+	/set start -default // return to default settings
+
+	/set start -retain filename //retain the file to start each time jshell starts.
+
+	/set start -retain -default //restore the defaults for future sessions
+
+
+
+
+
+   

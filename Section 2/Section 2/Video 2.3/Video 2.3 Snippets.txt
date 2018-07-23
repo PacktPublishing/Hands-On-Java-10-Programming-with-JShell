@@ -1,0 +1,63 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, A bigger scale
+ * Video:   2.3 examples - Discovery of Class’s Members & their Documentation
+*/
+
+// Listing Class Math’s static Members
+   Math. // Press tap
+
+   Math.E
+
+   Math.PI
+
+// Viewing a Method’s Parameters
+   Math.p // Press tap
+
+   Math.pow(  // Press tap
+
+   Math.pow(  // Press tap
+
+// Viewing a Method’s Documentation
+   Math.pow(  // Press tap - shows documentation
+
+// Viewing a public Field’s Documentation
+   Math.PI  // Press tap
+
+// Viewing a Class’s Documentation
+   Math // press Tap for signeature
+
+   Math // press Tap again for documentation
+
+// Viewing Method Overloads
+   Math.abs( // press Tap to show overloads
+
+   Math.abs( // press Tap again to show documentation
+
+   Math.abs( // press Tap again to show documentation of next overladed method.
+
+// Exploring Members of a Specific Object
+   String dayName = "Monday"
+
+   dayName. // press Tap
+
+   // Exploring toUpperCase
+   	 dayName.toU // press Tap
+
+   	 dayName.toUpperCase( // press Tap again to show parameters
+
+   	 dayName.toUpperCase( // press Tap again to show documentation
+
+  // Exploring substring
+   	 $2.substring( // press Tap
+
+   	 $2.substring( // press Tap to show overloads
+
+   	 $2.substring( // Tab again to view the first overload’s documentation
+
+   	 $2.substring(3)
+
+
+   

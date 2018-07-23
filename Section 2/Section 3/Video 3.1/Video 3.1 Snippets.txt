@@ -1,0 +1,34 @@
+/*
+ * Author:  Mohamed Taman, 13/6/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, Advanced Topics
+ * Video:   3.1 examples - Working with Modules
+*/
+
+// Adding a Module to the JShell Session
+
+	jshell --add-modules java.logging // When starting JShell
+
+// or
+
+	/env --add-modules java.logging //from inside JShell session
+
+// Importing a Class from a Module’s Exported Package(s)
+
+	import java.util.logging.*
+
+// Using the Imported Class
+
+	Logger log = Logger.getLogger("JShell Session")
+
+// Inspect log object methods
+
+	log. //press tap key
+
+	log.i //press tap key
+
+	log.in //press tap key
+
+	log.info("Logging Module is added to JShell successfully")
+   

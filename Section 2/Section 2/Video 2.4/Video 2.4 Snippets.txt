@@ -1,0 +1,35 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: JShell, A bigger scale
+ * Video:   2.4 examples - Declaring Methods
+*/
+
+// Forward referencing an undeclared method
+	void displayCubes() {
+	   for (int i = 1; i <= 10; i++) {
+	      System.out.println("Cube of " + i + " is " + cube(i));
+	   }
+	}
+
+// Declaring a Previously Undeclared Method
+	int cube(int x) {
+	    return x * x;
+	}
+
+	/methods  //Just show all declared methods.
+
+// Testing cube and Replacing Its Declaration
+	cube(2)
+
+	/edit cube
+
+// Testing Updated Method cube and Method
+	cube(2)
+
+	cube(10)
+
+	di  // Press tap
+
+	displayCubes()

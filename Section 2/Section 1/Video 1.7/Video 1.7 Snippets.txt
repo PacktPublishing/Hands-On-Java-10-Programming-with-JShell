@@ -1,0 +1,14 @@
+/*
+ * Author:  Mohamed Taman, 27/5/2018
+ * Course:  Hands-On Java 10 Programming with JShell
+ * 		    By Packt Publisher
+ * section: Interactive Java Shell 10, Basics
+ * Video:   1.7 examples - Command-Line Input in JShell
+*/
+
+// create a Scanner
+   Scanner input = new Scanner(System.in)
+   System.out.print("Enter first integer: ")
+   int number1 = input.nextInt()
+
+   int number1 = 45
